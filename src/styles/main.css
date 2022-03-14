@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400&family=Merienda&display=swap');
+
+.body {
+    display: block;
+
+    width: 70%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    background-image: url('../static/images/main_background--blured.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar {
+    font-family: 'Laila', sans-serif;
+    font-size: 28px;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 700px;
+    margin-right: 50px;
+}
+
+.navbar__list {
+    display: inherit;
+    justify-content: space-around;
+
+    width: 100%;
+
+    list-style: none;
+}
+
+.navbar__item {
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #b29b5e;
+}
+
+.navbar__item:active {
+    color: #a77b0f;
+}
+
+.button {
+    font-family: 'Merienda', sans-serif;
+
+    padding: 10px 35px;
+    padding-left: 45px;
+
+    color: #330e08;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(255,255,240,0) 0%, rgba(216,124,39,.7) 81%, rgba(216,124,32,1) 100%);
+}
+
+.button--longer {
+    font-family: 'Merienda', sans-serif;
+    font-size: 36pt;
+    font-weight: 800;
+
+    display: block;
+
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 35px;
+    padding-left: 45px;
+
+    text-align: right;
+
+    color: #330e08;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg, rgba(255,255,240,0) 0%, rgba(216,124,39,.7) 81%, rgba(216,124,32,1) 100%);
+}
+
+.main {
+    font-family: 'Merienda', cursive;
+
+    display: flex;
+    align-items: center;
+
+    width: 70%;
+    height: fit-content;
+    margin: 100px auto;
+    padding: 50px 50px 70px 70px;
+
+    border: 1px solid #a77b0f;
+    border-radius: 50px;
+    background-color: #07010362;
+}
+
+.main::before {
+    position: absolute;
+    z-index: -1;
+    bottom: 350px;
+    left: 450px;
+
+    display: inline;
+
+    width: 1170px;
+    height: 560px;
+
+    content: ' ';
+
+    border-radius: 50px;
+    background-color: #07010362;
+}
+
+.main__image {
+    width: 40%;
+    margin: 20px;
+
+    border: 1px solid #b7870e77;
+    border-radius: 160px 20px 20px;
+}
+
+.content__header {
+    font-size: 86px;
+
+    margin: 10px 0;
+
+    color: #dd9d61;
+    text-shadow: 3px 5px #724b27;
+}
+
+.content__text {
+    font-family: 'Laila', sans-serif;
+    font-size: 24px;
+
+    color: #b79f8c;
+}
