@@ -5,6 +5,7 @@
 :root {
     --background-color: #0701038f;
 
+    --menu-background-color: #fbe1c9;
     --color-primary: #d87c27;
     --color-primary-bright: #d46c03;
     --color-shadow: #5e4d3d;
@@ -16,9 +17,10 @@
 
 html {
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 
-    height: 100%;
+    height: max-content;
+    min-height: 100% !important;
 }
 
 .body {
@@ -31,7 +33,7 @@ html {
 
     background-image: url('../static/images/main_background--blured.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }   
 
 @media (min-width: 800px) {
@@ -77,9 +79,7 @@ html {
 }
 
 .header__navbar {
-    display: none;
-
-    min-width: 550px;
+    display: none; /*flex*/
 }
 
 @media (min-width: 800px) {
@@ -231,22 +231,85 @@ html {
 
 
 .navbar__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
 
-    width: 100%;
+    display: block;
+
+    width: 80%;
+    height: 50%;
+    padding: 150px 0;
 
     list-style: none;
+
+    opacity: .9;
+    border-radius: 250px 0 0 250px;
+    background-color: var(--menu-background-color);
+}
+
+.navbar__list li {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__list li:nth-of-type(2) {
+    margin: 0 0 50px;
+}
+
+@media (min-width: 800px) {
+    .navbar__list {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+
+        list-style: none;
+
+        background: none;
+    }
+
+    .navbar__list li {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar__list li:nth-of-type(2) {
+        margin: 0 0 10px;
+    }
 }
 
 .navbar__item {
-    margin: 0 10px;
+    font-family: 'Laila', sans-serif;
+    font-size: 32pt;
+    font-weight: bold;
+
+    margin: 10px;
 
     text-decoration: none;
-    text-transform: uppercase;
 
-    color: var(--color-secondary);
+    opacity: 1;
+    color: var(--color-secondary-dark);
+}
+
+@media (min-width: 800px) {
+    .navbar__item {
+        font-size: inherit;
+        font-weight: 300;
+        margin: 0 10px;
+
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: var(--color-secondary);
+    }
 }
 
 .navbar__item:hover {
@@ -303,7 +366,6 @@ html {
         text-align: right;
     }
 }
-
 
 .main {
     font-family: 'Merienda', cursive;
@@ -384,9 +446,6 @@ html {
     }
 }
 
-
-@media (min-width: 800px) {
-}
 .main__header {
     display: none;
 }
