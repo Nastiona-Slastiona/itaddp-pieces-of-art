@@ -1,0 +1,134 @@
+@import url('./main.css');
+
+.body {
+    background-image: url('../static/images/signIn_background--blur.png');
+}
+
+.main::before {
+    display: none;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+    background: none;
+}
+
+.main__form {
+    min-width: 300px;
+    max-width: 500px;
+    margin-left: 5%;
+    padding: 20px 10px;
+
+    border: solid 2px var(--color-border);
+    border-radius: 50px;
+    background-color: var(--background-color--darker);
+}
+
+.form__list {
+    list-style: none;
+}
+
+.form__item {
+    font-family: 'Laila', sans-serif;
+    font-size: 36px;
+
+    margin: 10px 0 30px;
+
+    color: var(--color-secondary);
+}
+
+.form__item--centralized {
+    font-family: 'Laila', sans-serif;
+    font-size: 36px;
+
+    margin: 10px 100px;
+
+    color: var(--color-secondary);
+}
+
+.form__item  label {
+    margin-left: 25px;
+}
+
+.form__item:nth-child(3) label {
+    margin-left: 0;
+}
+
+.form__item  label small {
+    font-size: 18px;
+}
+
+.form__item--centralized button {
+    font-size: 36px;
+    font-weight: 900;
+
+    margin: 0 auto;
+
+    text-transform: uppercase;
+}
+
+.form__input {
+    font-family: inherit;
+    font-size: inherit;
+
+    display: block;
+
+    max-width: 85%;
+    padding: 0 20px;
+
+    border-radius: 50px;
+    background-color: var(--inut-background);
+}
+
+.main__info {
+    display: block;
+
+    width: 450px;
+    height: 530px;
+    margin: 0 35px 50px 0;
+}
+
+.main__info::after {
+    position: absolute;
+    z-index: -1;
+    right: 80px;
+    bottom: 50px;
+
+    display: block;
+
+    width: 350px;
+    height: 490px;
+
+    content: ' ';
+
+    border: solid 2px var(--color-border);
+    border-radius: 20px;
+    background: 100% 100%;
+    background-color: var(--background-color);
+}
+
+.info__image {
+    z-index: 1;
+
+    width: 80%;
+    height: 90%;
+
+    border: solid 2px var(--color-border);
+    border-radius: 20px;
+}
+
+.info__label {
+    font-family: 'Laila', sans-serif;
+    font-size: 28px;
+
+    display: block;
+
+    margin: 15px;
+
+    text-align: right;
+
+    color: var(--color-secondary);
+}

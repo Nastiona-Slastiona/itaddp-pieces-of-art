@@ -4,6 +4,7 @@
 
 :root {
     --background-color: #0701038f;
+    --background-color--darker: #070103c0;
 
     --menu-background-color: #fbe1c9;
     --color-primary: #d87c27;
@@ -13,6 +14,7 @@
     --color-secondary-dark: #330e08;
     --color-border: #a77c0f77;
     --color-text: #b79f8c;
+    --inut-background: #C4C4C4;
 }
 
 html {
@@ -51,7 +53,6 @@ html {
 
     width: 90%;
     min-width: fit-content;
-    max-width: 700px;
     margin: 20px 10px;
 
     transition: all 2s ease-in-out;
