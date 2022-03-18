@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" href="./static/icons/puzzle.ico" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/registration.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <title>Pieces of Art</title>
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <span class="logo">
+                <span class="logo__symbols">♦-----</span>
+                <span span class="logo__text"> Pieces of Art</span>
+                <span class="logo__symbols">-----♦</span>
+            </span>
+            <nav class="header__navbar">
+                <ul class="navbar__list">
+                    <li><a class="navbar__item" href="#">Home</a></li>
+                    <li><a class="navbar__item" href="#">About</a></li>
+                    <!-- <li><a class="navbar__item" href="#">Register</a></li> -->
+                    <li><a class="button navbar__item" href="#">Sign In</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger"><span></span></div>
+            <div class="header__change-mode" title="change mode"></div>
+        </header>
+        <main class="main">
+            <form method="post" class="main__form">
+                <ul class="form__list">
+                    <li class="form__item">
+                        <label>Email*</label>
+                        <input class="form__input" placeholder="Email" type="email" id="email" name="user_email"
+                            required>
+                    </li>
+                    <li class="form__item">
+                        <label>Name*</label>
+                        <input class="form__input" placeholder="Name" type="text" id="Name" name="user_name" required>
+                    </li>
+                    <li class="form__item">
+                        <label>Password*</label>
+                        <input class="form__input" placeholder="Password" type="password" id="password" required>
+                    </li>
+                    <li class="form__item">
+                        <label>Profile image</label>
+                        <input class="form__input" type="file" id="email" name="user_image" required>
+                    </li>
+                    <li class="form__item">
+                        <label>Confirm password*</label>
+                        <input class="form__input" placeholder="Confirmation" type="password" id="confirm_password"
+                            name="user_password_confirmation" required>
+                    </li>
+                </ul>
+                <div class="form__item--centralized">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </form>
+        </main>
+        <hr class="divider">
+        <footer class="footer">© Pieces of Art, 2022</footer>
+    </body>
+
+</html>

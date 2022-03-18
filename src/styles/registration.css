@@ -1,0 +1,13 @@
+@import url('./signIn.css');
+
+.main__form {
+    max-width: 1000px;
+    max-height: 600px;
+}
+
+.form__list {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row: auto auto auto;
+    gap: 20px;
+}
