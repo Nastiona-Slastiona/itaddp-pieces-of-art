@@ -1,7 +1,15 @@
 @import url('./main.css');
 
 .body {
+    margin: 0;
     background-image: url('../static/images/signIn_background--blur.png');
+}
+
+@media (min-width: 800px) {
+    .body {
+        margin: auto;
+        background-image: url('../static/images/signIn_background--blur.png');
+    }
 }
 
 .main::before {
@@ -11,40 +19,74 @@
 .main {
     display: flex;
     justify-content: space-between;
-
+    min-width: fit-content;
     border: none;
+    margin: 20px auto;
+    min-width: 150px;
+    padding: 0 0 30px 0;
     background: none;
+}
+
+@media (min-width: 1300px) {
+    .main {
+        margin: 0;
+    }
 }
 
 .main__form {
     min-width: 300px;
     max-width: 500px;
-    margin-left: 5%;
     padding: 20px 10px;
+    margin: 0 50px 0 0;
 
     border: solid 2px var(--color-border);
-    border-radius: 50px;
+    border-radius: 0 50px 50px 0;
     background-color: var(--background-color--darker);
+}
+
+@media (min-width: 800px) {
+    .main__form {
+        margin: 0 auto;
+        border-radius: 50px;
+    
+    }
+}
+
+@media (min-width: 1400px) {
+    .main__form {
+        min-width: 300px;
+        max-width: 500px;
+        padding: 20px 10px;
+    }
 }
 
 .form__list {
     list-style: none;
+    padding: 0;
 }
 
 .form__item {
     font-family: 'Laila', sans-serif;
     font-size: 36px;
-
+    width: 70%;
+    padding-left: 10px;
     margin: 10px 0 30px;
 
     color: var(--color-secondary);
 }
 
+@media (min-width: 800px) {
+    .form__item {
+        padding-left: 30px;
+        width: 80%;
+    }
+}
+
 .form__item--centralized {
     font-family: 'Laila', sans-serif;
     font-size: 36px;
-
-    margin: 10px 100px;
+    display: flex;
+    justify-self: center;
 
     color: var(--color-secondary);
 }
@@ -76,7 +118,7 @@
 
     display: block;
 
-    max-width: 85%;
+    width: 100%;
     padding: 0 20px;
 
     border-radius: 50px;
@@ -84,11 +126,21 @@
 }
 
 .main__info {
-    display: block;
+    display: none;
 
     width: 450px;
     height: 530px;
-    margin: 0 35px 50px 0;
+    margin: 0 15px 50px 15px;
+}
+
+@media (min-width: 1400px) {
+    .main__info {
+        display: block;
+    
+        width: 450px;
+        height: 530px;
+        margin: 0 15px 50px 15px;
+    }
 }
 
 .main__info::after {

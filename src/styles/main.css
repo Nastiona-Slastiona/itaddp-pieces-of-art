@@ -216,7 +216,7 @@ html {
     margin: 0 10px;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 800px) {
     .logo__symbols {
         display: block;
     }
@@ -534,22 +534,21 @@ html {
     display: none;
 }
 
-@media (min-width: 800px) {
-    @media (min-height: 850px) {
-        .footer {
-            font-size: 16pt;
+@media (min-height: 850px) {
+    .footer {
+        font-size: 16pt;
 
-            position: fixed;
-            bottom: 10px;
-            left: 0;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
 
-            display: flex;
-            justify-content: center;
+        display: flex;
+        justify-content: center;
 
-            width: 100%;
-            margin-top: 30px;
+        width: 100%;
+        margin-top: 30px;
 
-            color: var(--color-secondary);
-        }
+        color: var(--color-secondary);
     }
 }
+
