@@ -1,13 +1,162 @@
 @import url('./signIn.css');
 
-.main__form {
-    max-width: 1000px;
-    max-height: 600px;
+:root {
+    --text-color-dark: #4d3e31;
+    --input-file-backround: #a88e8e;
+    --input-file-backround-shadow: #7c6767;
+    --color-border: #a77c0f77;
+    
+    --background-color--darker: #070103e0;
+    --background-image: url("../static/images/registration-back.png");
 }
 
-.form__list {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-row: auto auto auto;
-    gap: 20px;
+.body {
+    width: auto;
+
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: 350% 100%;
 }
+
+@media (min-width: 800px) {
+    .body {
+        background-size: 100% 100%;
+    }
+}
+
+.main__form {
+    min-width: fit-content;
+    height: fit-content;
+    margin: 0 20px 0 0;
+    padding: 2em 0 2em 0;
+
+    border-left: none ;
+    border-radius: 0 50px 50px 0;
+    background-color: var(--background-color--darker);
+}
+
+@media (min-width: 800px) {
+    .main__form {
+        min-width: 750px;
+        max-width: 1000px;
+        margin: 30px 20px 0 0;
+        padding: 2em 5em 2em 2em;
+
+        border-left: solid 2px var(--color-border);
+        border-radius: 100px;
+    }
+}
+
+.main {
+    width: 90%;
+    margin: 0;
+}
+
+@media (min-width: 800px) {
+    .main {
+        justify-content: center;
+
+        margin: 0 auto 40px;
+
+        transition: all 1s ease-in-out;
+    }
+}
+
+
+.form__list {
+    display: block;
+
+    width: 100%;
+}  
+
+@media (min-width: 800px) {
+    .form__list {
+        display: grid;
+
+        margin-bottom: 70px;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 130px);
+        column-gap: 30px;
+        row-gap: 20px;
+    }
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px 15px 5px 10px;
+}
+
+@media (min-width: 800px) {
+    .form__input {
+        width: 90%;
+        padding: 20px 25px 10px;
+    }
+}
+
+.form__input--file {
+    opacity: 0;
+    background: none;
+}
+
+.form__label--file {
+    font-size: 18pt;
+
+    display: block;
+
+    max-width: fit-content;
+    padding: 5px 30px;
+
+    color: var(--text-color-dark);
+    border-radius: 30px;
+    background-color: var(--input-file-backround);
+    box-shadow: inset 0 -8px 5px 0 var(--input-file-backround-shadow);
+}
+
+.form__item {
+    font-size: 28px;
+
+    margin: 30px 0 0 20px;
+}
+
+.form__item:nth-child(3) label {
+    margin-left: 25px;
+}
+
+.form__item:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.form__item:nth-child(5) {
+    min-width: 200px;
+
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.form__item--centralized button {
+    font-size: 36px;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0 30px 0 80px;
+
+    text-transform: uppercase;
+}
+
+@media (min-width: 800px) {
+    .form__item--centralized button {
+        font-size: 36px;
+        font-weight: 900;
+
+        margin: 0 auto;
+
+        text-transform: uppercase;
+    }
+}
+
+.divider {
+    width: 100%;
+}
+

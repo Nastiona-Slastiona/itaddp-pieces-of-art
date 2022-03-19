@@ -30,7 +30,7 @@
             <div class="header__change-mode" title="change mode"></div>
         </header>
         <main class="main">
-            <form method="post" class="main__form">
+            <form method="post" class="main__form" id="main-form">
                 <ul class="form__list">
                     <li class="form__item">
                         <label>Email*</label>
@@ -46,13 +46,14 @@
                         <input class="form__input" placeholder="Password" type="password" id="password" required>
                     </li>
                     <li class="form__item">
-                        <label>Profile image</label>
-                        <input class="form__input" type="file" id="email" name="user_image" required>
+                        <label>Password*</label>
+                        <input class="form__input" placeholder="Confirm password" type="password" id="confirm_password"
+                            name="user_password_confirmation" required>
                     </li>
                     <li class="form__item">
-                        <label>Confirm password*</label>
-                        <input class="form__input" placeholder="Confirmation" type="password" id="confirm_password"
-                            name="user_password_confirmation" required>
+                        <label>Profile image</label>
+                        <label for="user-image" class="form__label--file">Choose file</label>
+                        <input class="form__input form__input--file" type="file" id="user-image" form="main-form">
                     </li>
                 </ul>
                 <div class="form__item--centralized">
