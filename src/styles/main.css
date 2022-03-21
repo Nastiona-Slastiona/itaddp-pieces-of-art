@@ -279,10 +279,6 @@ html {
     justify-content: center;
 }
 
-.navbar__list li:nth-of-type(2) {
-    margin: 0 0 50px;
-}
-
 @media (min-width: 800px) {
     .navbar__list {
         position: relative;
@@ -299,16 +295,6 @@ html {
 
         background: none;
     }
-
-    .navbar__list li {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .navbar__list li:nth-of-type(2) {
-        margin: 0 0 10px;
-    }
 }
 
 .navbar__item {
@@ -319,7 +305,10 @@ html {
     margin: 10px;
 
     text-decoration: none;
-
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: fit-content;
+    align-items: center;
     opacity: 1;
     color: var(--color-secondary-dark);
 }
