@@ -40,3 +40,10 @@ In my project I made this game more pleasent due to using famous paintings inste
     - Score of the game
     - Size of the picture
     - Playing song
+
+## Related to the second lab
+
+1. [Main Page](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/index.html)
+2. [PlayPage](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/playPage.html)
+3. [Sign In](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/signIn.html) / [Registration](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/registration.html) 
+4. [Galery](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/galery.html)
