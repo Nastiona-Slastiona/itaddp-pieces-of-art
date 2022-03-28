@@ -3,14 +3,14 @@
 @import url('./logo.css');
 
 :root {
-    --background-color: #0701038f;
-    --background-color--darker: #070103c0;
+    --background-color: #6d836cad;
+    --background-color--darker: #6d836cd7;
 
     --menu-background-color: #fbe1c9;
     --color-primary: #d87c27;
     --color-primary-bright: #d46c03;
     --color-shadow: #5e4d3d;
-    --color-secondary: #dd9d61;
+    --color-secondary: #A77B0F;
     --color-secondary-dark: #330e08;
     --color-border: #a77c0f77;
     --color-text: #b79f8c;
