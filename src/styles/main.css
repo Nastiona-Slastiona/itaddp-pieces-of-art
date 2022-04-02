@@ -44,6 +44,8 @@
 html {
     overflow-x: hidden;
     overflow-y: scroll;
+    min-width: fit-content;
+
 
     height: max-content;
     min-height: 100% !important;
@@ -53,7 +55,7 @@ html {
     position: relative;
 
     display: block;
-
+    min-width: fit-content;
     width: 100%;
     height: 100%;
 
@@ -366,7 +368,7 @@ html {
     display: block;
 
     width: fit-content;
-    margin: 30px 80px;
+    margin: 30px 0 30px 80px;
     padding: 0 35px;
     padding-left: 75px;
 
@@ -391,7 +393,6 @@ html {
     display: block;
     align-items: center;
 
-    width: 100%;
     margin: 50px 0 0 50px;
     padding: 10px 20px 90px 10px;
 
@@ -404,11 +405,11 @@ html {
 
 @media (min-width: 800px) {
     .main {
-        min-width: 900px;
+        /* min-width: fit-content; */
         max-width: 90%;
         height: fit-content;
         min-height: 450px;
-        margin: 100px auto;
+        margin: 100px 150px;
         padding: 80px 30px 50px 30px;
 
         border-radius: 50px;
@@ -488,7 +489,7 @@ html {
     display: flex;
 
     max-width: 78%;
-    margin: 50px 5px 10px;
+    margin: 20px 5px 10px;
 
     text-align: right;
 
