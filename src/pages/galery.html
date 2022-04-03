@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="dark_mode">
+
+    <head>
+        <link rel="icon" href="../static/icons/puzzle.ico" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/galery.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <title>Galery</title>
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <span class="logo"><span class="logo__symbols">♦-----</span><span span class="logo__text"> Pieces of Art
+                </span>
+                <span class="logo__symbols">-----♦</span></span>
+            <nav class="header__navbar">
+                <ul class="navbar__list">
+                    <li>
+                        <a class="navbar__item" href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="navbar__item navbar__item--selected" href="#">Galery</a>
+                    </li>
+                    <li>
+                        <a class="navbar__item" href="#">About</a>
+                    </li>
+                </ul>
+                <label class="navbar__item">
+                    <span>Hello, Name!</span>
+                    <img src="../static/images/user.png" alt="user photo" class="user__image">
+                </label>
+            </nav>
+            <div class="header__favorites" title="See favorites"></div>
+            <div class="header__burger"><span></span></div>
+        </header>
+        <main class="main">
+            <section class="main__search">
+                <input class="search__input" placeholder="Search..." id="search__input">
+                <label class="search__label" for="search__input">
+                    <img src="../static/images/search.png" alt="search icon" class="search__icon">
+                </label>
+            </section>
+            <section class="main__galery">
+                <div class="main__navigation main__navigation--left"><img src="../static/images/left-arrow.png"
+                        alt="left_navigation" class="navigation"></div>
+                <div class="main__navigation main__navigation--right"><img src="../static/images/right-arrow.png"
+                        alt="right_navigation" class="navigation"></div>
+                <article class="galery__item galery__item--left">
+                    <div class="item__wrapper item__wrapper--left">
+                        <img class="item__image" src="../static/images/Mona_Lisa--cut.jpg" alt="Mona_Lisa" />
+                        <div class="item__complexity">
+                            <span class="complexity__type complexity__type--selected">3x3</span>
+                            <span class="complexity__type">4x4</span>
+                            <span class="complexity__type">5x5</span>
+                        </div>
+                    </div>
+                    <article class="item__text">
+                        <span class="text__header">The Mona Lisa</span>
+                        <article class="text__article">
+                            a half-length portrait painting by Italian artist Leonardo da
+                            Vinci
+                        </article>
+                    </article>
+                </article>
+                <article class="galery__item galery__item--right">
+                    <article class="item__text">
+                        <span class="text__header">The Last Day of Pompei</span>
+                        <article class="text__article">
+                            a large history painting by Karl Bryullov produced in 1830-1833.
+                        </article>
+                    </article>
+                    <div class="item__wrapper item__wrapper--right">
+                        <img class="item__image" alt="The_last_day_of_the_Pompei"
+                            src="../static/images/registration-back.png">
+                        <div class="item__complexity">
+                            <span class="complexity__type--selected">3x3</span>
+                            <span class="complexity__type">4x4</span>
+                            <span class="complexity__type">5x5</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <hr class="divider">
+        <footer class="footer">© Pieces of Art, 2022</footer>
+    </body>
+
+</html>

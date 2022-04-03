@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="dark_mode">
+
+    <head>
+        <link rel="icon" href="./static/icons/puzzle.ico" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <title>Pieces of Art</title>
+    </head>
+
+    <body class="body">
+        <header class="header">
+            <span class="logo"><span class="logo__symbols">♦-----</span><span span class="logo__text"> Pieces of Art
+                </span>
+                <span class="logo__symbols">-----♦</span></span>
+            <nav class="header__navbar">
+                <ul class="navbar__list">
+                    <li><a class="navbar__item navbar__item--selected" href="./index.html">Home</a></li>
+                    <li><a class="navbar__item" href="./pages/galery.html">Galery</a></li>
+                    <li><a class="navbar__item" href="#">About</a></li>
+                    <!-- <li><a class="navbar__item" href="#">Sign in</a></li> -->
+                    <li><a class="button navbar__item" href="./pages/signIn.html">Sign in</a></li>
+                </ul>
+            </nav>
+            <div class="header__burger"><span></span></div>
+            <div class="header__change-mode" title="change mode"></div>
+        </header>
+        <main class="main">
+            <p class="main__header">How to play</p>
+            <p class="main__header--small">Solve the puzzle - get a picture!</p>
+            <section class="main__content">
+                <section>
+                    <article class="main__text">Our game is one of the most interesting and simple puzzles in the
+                        world.<br />
+                        ----------<br />
+                        Using an empty cell for movement, you need to rearrange the chips so that they make up a
+                        beautiful picture.</article>
+                    <button class="button button--longer">Play</button>
+                </section>
+                <div class="main__wrapper">
+                    <img alt="Background picture dark mode" src="./static/images/main_background--dark.jpg"
+                        class="main__image">
+                </div>
+            </section>
+        </main>
+        <hr class="divider">
+        <footer class="footer">© Pieces of Art, 2022</footer>
+    </body>
+
+</html>
