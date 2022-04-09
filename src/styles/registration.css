@@ -2,10 +2,16 @@
 
 :root {
     --text-color-dark: #4d3e31;
+    --input-file-backround: #cfaf73;
+    --input-file-backround-shadow: #aa8d54;
+}
+
+.dark_mode {
+    --text-color-dark: #4d3e31;
     --input-file-backround: #a88e8e;
     --input-file-backround-shadow: #7c6767;
     --color-border: #a77c0f77;
-    
+
     --background-color--darker: #070103e0;
     --background-image: url("../static/images/registration-back.png");
 }
@@ -30,7 +36,7 @@
     margin: 0 20px 0 0;
     padding: 2em 0 2em 0;
 
-    border-left: none ;
+    border-left: none;
     border-radius: 0 50px 50px 0;
     background-color: var(--background-color--darker);
 }
@@ -57,8 +63,6 @@
         justify-content: center;
 
         margin: 0 auto 40px;
-
-        transition: all 1s ease-in-out;
     }
 }
 
@@ -67,7 +71,7 @@
     display: block;
 
     width: 100%;
-}  
+}
 
 @media (min-width: 800px) {
     .form__list {
@@ -159,4 +163,3 @@
 .divider {
     width: 100%;
 }
-
