@@ -47,3 +47,9 @@ In my project I made this game more pleasent due to using famous paintings inste
 2. [PlayPage](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/playPage.html)
 3. [Sign In](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/signIn.html) / [Registration](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/registration.html) 
 4. [Galery](https://nastiona-slastiona.github.io/itaddp-pieces-of-art/src/pages/galery.html)
+
+## Related to the 4 lab
+
+Here you can find deployed version of website [Pieces-Of-Art](https://pieces-of-art.web.app). 
+There is no logging and register yet, and you can play only with one picture. But it's because I haven't used database yet. 
+But there is all main js functionality my app need. Try to play, and have fun.
