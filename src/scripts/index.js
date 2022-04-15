@@ -59,6 +59,8 @@ const router = async () => {
         await view.setImage(complexity);
     }
 
+    await view.changeHtml();
+
 };
 
 window.addEventListener("popstate", router);

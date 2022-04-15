@@ -10,7 +10,6 @@ export default class extends AbstractView {
         this.cleanNavbar();
         this.setTitle("Player");
         this.addStyles();
-        this.changeHtml();
     }
 
     addStyles() {
@@ -23,7 +22,7 @@ export default class extends AbstractView {
 
     }
 
-    changeHtml() {
+    async changeHtml() {
         const body = document.querySelector('.body');
         const script = document.createElement('script');
         if (document.querySelector('.header__change-mode')) {
@@ -31,11 +30,13 @@ export default class extends AbstractView {
         }
         body.classList.remove('dark_mode');
 
-        console.log('player start');
         script.src = './scripts/play.js';
         script.type = 'module';
         script.id = 'player';
         body.append(script);
+
+        const nav = document.querySelector('.navbar__list').childNodes;
+        nav[nav.length - 2].innerHTML = `<a class="button navbar__item" href="./signin" data-link>Sign In</a>`;
     }
 
     async setImage(complexity) {

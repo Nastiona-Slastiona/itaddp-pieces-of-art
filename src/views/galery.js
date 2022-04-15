@@ -21,12 +21,15 @@ export default class extends AbstractView {
         head.appendChild(link);
     }
 
-    changeHtml() {
+    async changeHtml() {
         if (document.querySelector('.header__change-mode')) {
             document.querySelector('.header__change-mode').remove();
         }
         document.querySelector('.body').classList.remove('dark_mode');
         document.querySelectorAll('.navbar__item')[1].classList.add('navbar__item--selected');
+
+        const nav = document.querySelector('.navbar__list').childNodes;
+        nav[nav.length - 2].innerHTML = `<a class="button navbar__item" href="./signin" data-link>Sign In</a>`;
     }
 
     async getHtml() {

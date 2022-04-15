@@ -20,6 +20,11 @@ export default class extends AbstractView {
         head.appendChild(link);
     }
 
+    async changeHtml() {
+        const nav = document.querySelector('.navbar__list').childNodes;
+        nav[nav.length - 2].innerHTML = `<a class="button navbar__item" href="./signin" data-link>Sign In</a>`;
+    }
+
     async getHtml() {
         return `
         <main class="main">

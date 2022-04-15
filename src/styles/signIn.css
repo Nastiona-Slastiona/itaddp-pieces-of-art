@@ -160,7 +160,7 @@
 .main__info::after {
     position: absolute;
     z-index: -1;
-    right: 80px;
+    right: 220px;
     bottom: 50px;
 
     display: block;

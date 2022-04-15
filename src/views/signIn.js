@@ -6,6 +6,7 @@ export default class extends AbstractView {
         super();
         this.resetStyles();
         this.addMode();
+        this.cleanNavbar();
         this.setTitle("Sign In");
         this.addStyle();
         this.changeHtml();
@@ -21,13 +22,9 @@ export default class extends AbstractView {
         head.appendChild(link);
     }
 
-    changeHtml() {
+    async changeHtml() {
         const nav = document.querySelector('.navbar__list').childNodes;
-        nav[7].remove();
-        const reg = document.createElement('li');
-        reg.innerHTML = `<a class="button navbar__item" href="./registration" data-link>Register</a>`;
-
-        document.querySelector('.navbar__list').appendChild(reg);
+        nav[nav.length - 2].innerHTML = `<a class="button navbar__item" href="./registration" data-link>Register</a>`;
     }
 
     async getHtml() {

@@ -8,7 +8,6 @@ export default class {
     }
 
     getMode() {
-        console.log('hi');
         const mode = localStorage.getItem('mode');
         if (mode === 'light' && document.querySelector('.dark_mode')) {
             document.querySelector('.dark_mode').classList.add('light_mode');
@@ -49,7 +48,6 @@ export default class {
         document.querySelector('.header').append(changeMode);
         const mode = localStorage.getItem('mode');
         if (mode === 'dark') {
-            console.log('gigig');
             document.body.classList.add('dark_mode');
         }
 
