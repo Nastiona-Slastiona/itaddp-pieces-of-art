@@ -267,6 +267,7 @@
     text-decoration: none;
 
     transition: all 1s ease;
+    color: var(--color-shadow);
 }
 
 .complexity__type:visited {

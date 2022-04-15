@@ -4,6 +4,8 @@ import AbstractView from "./abstractView.js";
 export default class extends AbstractView {
     constructor() {
         super();
+        this.resetStyles();
+        this.addMode();
         this.setTitle("Registration");
         this.addStyle();
         this.getMode();
@@ -33,11 +35,11 @@ export default class extends AbstractView {
                     </li>
                     <li class="form__item">
                         <label>Password*</label>
-                        <input class="form__input" placeholder="Password" type="password" id="password" required>
+                        <input class="form__input" placeholder="Password" type="password" id="password" autocomplete required>
                     </li>
                     <li class="form__item">
                         <label>Password*</label>
-                        <input class="form__input" placeholder="Confirm password" type="password" id="confirm_password"
+                        <input class="form__input" placeholder="Confirm password" type="password" id="confirm_password" autocomplete
                             name="user_password_confirmation" required>
                     </li>
                     <li class="form__item">

@@ -6,6 +6,8 @@ import { changeComplexity } from "../helpers/playServiceHelper.js";
 export default class extends AbstractView {
     constructor() {
         super();
+        this.resetStyles();
+        this.cleanNavbar();
         this.setTitle("Player");
         this.addStyles();
         this.changeHtml();
@@ -24,11 +26,15 @@ export default class extends AbstractView {
     changeHtml() {
         const body = document.querySelector('.body');
         const script = document.createElement('script');
-        document.querySelector('.header__change-mode').remove();
+        if (document.querySelector('.header__change-mode')) {
+            document.querySelector('.header__change-mode').remove();
+        }
         body.classList.remove('dark_mode');
 
+        console.log('player start');
         script.src = './scripts/play.js';
         script.type = 'module';
+        script.id = 'player';
         body.append(script);
     }
 

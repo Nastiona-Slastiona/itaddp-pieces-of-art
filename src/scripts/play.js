@@ -5,17 +5,17 @@ import {
     getMatrix,
     isValidForSwap,
     setPositionItems,
-    setScore,
     shuffleArray,
     swap
 } from "../helpers/playServiceHelper.js";
 
 import complexities from "../constants/complexities.js";
 
-const func = () => {
+
+function func() {
     const playWindow = document.querySelector(".main__playwindow");
     let items = Array.from(playWindow.querySelectorAll('.playwindow__puzzle'));
-    let countItems = 9;
+    let countItems = items.length;
 
 
     items[countItems - 1].style.display = "none";
@@ -40,7 +40,6 @@ const func = () => {
                 ? 9
                 : 25;
 
-        console.log(oldSize_, newSize_, isEasiest, isHardest);
         playWindow.classList.remove(isEasiest
             ? complexities.easy.className
             : isHardest
@@ -60,7 +59,7 @@ const func = () => {
             items.map(item => +item.dataset.matrixId)
         );
 
-        changeMatrix(matrix);
+        matrix = changeMatrix(matrix);
     }));
 
 

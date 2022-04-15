@@ -90,6 +90,7 @@ export function changeMatrix(matrix) {
     const items = Array.from(document.querySelectorAll('.playwindow__puzzle'));
     matrix = getMatrix(shuffleArray(matrix.flat()));
     setPositionItems(matrix, items);
+    return matrix;
 }
 
 function isWon(matrix) {

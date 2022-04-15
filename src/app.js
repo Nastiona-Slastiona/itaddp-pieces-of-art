@@ -10,9 +10,9 @@ app.use("/scripts", express.static(path.resolve("scripts")));
 app.use("/views", express.static(path.resolve("views")));
 app.use("/constants", express.static(path.resolve("constants")));
 
-
+console.log(path.resolve("views"));
 app.get("/*", (req, res) => {
-    res.sendFile(path.resolve("index.html"));
+    res.sendFile(path.resolve("./index.html"));
 })
 
-app.listen(5000, () => console.log("Server running..."))
+app.listen(process.env.PORT || 5000, () => console.log("Server running..."))

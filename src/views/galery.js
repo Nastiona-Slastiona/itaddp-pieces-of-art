@@ -4,7 +4,10 @@ import AbstractView from "./abstractView.js";
 export default class extends AbstractView {
     constructor() {
         super();
+        this.resetStyles();
+        this.resetScripts();
         this.setTitle("Galery");
+        this.cleanNavbar();
         this.addStyle();
         this.changeHtml();
     }
@@ -19,7 +22,9 @@ export default class extends AbstractView {
     }
 
     changeHtml() {
-        document.querySelector('.header__change-mode').remove();
+        if (document.querySelector('.header__change-mode')) {
+            document.querySelector('.header__change-mode').remove();
+        }
         document.querySelector('.body').classList.remove('dark_mode');
         document.querySelectorAll('.navbar__item')[1].classList.add('navbar__item--selected');
     }
@@ -42,9 +47,9 @@ export default class extends AbstractView {
                     <div class="item__wrapper item__wrapper--left">
                         <img class="item__image" src="../static/images/Mona_Lisa--cut.jpg" alt="Mona_Lisa" />
                         <div class="item__complexity" title="start game">
-                            <a class="complexity__type complexity__type--selected" href="/player">3x3</a>
-                            <a class="complexity__type" href="/player4x4">4x4</a>
-                            <a class="complexity__type" href="/player5x5">5x5</a>
+                            <a class="complexity__type complexity__type--selected" href="/player" data-link>3x3</a>
+                            <a class="complexity__type" href="/player4x4" data-link>4x4</a>
+                            <a class="complexity__type" href="/player5x5" data-link>5x5</a>
                         </div>
                     </div>
                     <article class="item__text">
@@ -65,9 +70,9 @@ export default class extends AbstractView {
                     <div class="item__wrapper item__wrapper--right">
                         <img class="item__image" alt="The_last_day_of_the_Pompei" src="../static/images/registration-back.png">
                         <div class="item__complexity" title="start game">
-                            <span class="complexity__type complexity__type--selected">3x3</span>
-                            <span class="complexity__type">4x4</span>
-                            <span class="complexity__type">5x5</span>
+                            <a class="complexity__type complexity__type--selected" href="/player" data-link>3x3</a>
+                            <a class="complexity__type" href="/player4x4" data-link>4x4</a>
+                            <a class="complexity__type" href="/player5x5" data-link>5x5</a>
                         </div>
                     </div>
                 </article>

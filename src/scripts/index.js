@@ -53,7 +53,7 @@ const router = async () => {
     const view = new match.route.view();
     document.querySelector("#app").innerHTML = await view.getHtml();
 
-    if (match.route.path === "/player" || match.route.path === "/player4x4" || match.route.path === "/player5x5") {
+    if (location.pathname === "/player" || match.route.path === "/player4x4" || match.route.path === "/player5x5") {
         const complexity = match.route.path.endsWith("4x4") ? 4 : match.route.path.endsWith('5x5') ? 5 : 3;
 
         await view.setImage(complexity);
@@ -65,8 +65,8 @@ window.addEventListener("popstate", router);
 
 document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", e => {
-        if (e.target.matchesSelector !== 'undefined') {
-            if (e.target.matchesSelector("[data-link]")) {
+        if (e.target.matches !== 'undefined') {
+            if (e.target.matches("[data-link]")) {
                 e.preventDefault();
                 navigateTo(e.target.href);
             }

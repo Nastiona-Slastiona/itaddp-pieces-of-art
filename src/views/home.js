@@ -4,13 +4,18 @@ import AbstractView from "./abstractView.js";
 export default class extends AbstractView {
     constructor() {
         super();
+        this.resetStyles();
+        this.resetScripts();
+        this.addMode();
         this.setTitle("Pieces Of Art");
+        this.cleanNavbar();
         this.getMode();
         this.setHomeSelected();
     }
 
     setHomeSelected() {
         document.querySelectorAll('.navbar__item')[0].classList.add('navbar__item--selected');
+
     }
 
     async getHtml() {
@@ -25,7 +30,7 @@ export default class extends AbstractView {
                         ----------<br />
                         Using an empty cell for movement, you need to rearrange the chips so that they make up a
                         beautiful picture.</article>
-                    <a class="button button--longer" href="./player">Play</a>
+                    <a class="button button--longer" href="./player" data-link >Play</a>
                 </section>
                 <div class="main__wrapper">
                     <img alt="Background picture dark mode" src="./static/images/main_background--dark.jpg"

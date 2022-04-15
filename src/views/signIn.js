@@ -4,6 +4,8 @@ import AbstractView from "./abstractView.js";
 export default class extends AbstractView {
     constructor() {
         super();
+        this.resetStyles();
+        this.addMode();
         this.setTitle("Sign In");
         this.addStyle();
         this.changeHtml();
