@@ -1,0 +1,13 @@
+.github/
+.vscode/
+
+package-lock.json
+package.json
+
+node_modules/
+
+database.rules.json
+
+build/*
+
+.firebase/

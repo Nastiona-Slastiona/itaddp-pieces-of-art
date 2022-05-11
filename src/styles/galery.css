@@ -15,6 +15,7 @@
     --color-border: #f5bd2d;
     --color-text: #b79f8c;
     --color-item-header: #a46b37;
+    --color-button: var(--color-primary-bright);
     --inut-background: #c4c4c4;
     --favorites-image: url('../static/images/favourite.png');
 }
@@ -24,9 +25,14 @@
     margin: 0 auto;
 }
 
+.app {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
 .body {
     width: unset;
-    /* height: 100rem; */
     margin: 0 auto;
 
     background-size: 100% 100%;
@@ -41,7 +47,8 @@
     font-family: 'Laila';
     font-weight: bolder;
     margin: 0 10px;
-    
+    min-width: fit-content;
+
     border-radius: 50px;
 }
 
@@ -60,7 +67,7 @@
     .header {
         width: 90%;
         max-width: unset;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 }
 
@@ -146,9 +153,9 @@
 
     color: var(--color-primary);
     text-shadow: -1px 1px 0 #000,
-    1px 1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000;
+        1px 1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
 }
 
 @media (min-width: 800px) {
@@ -257,15 +264,26 @@
 
 .complexity__type {
     margin: 0 10px;
+    text-decoration: none;
 
     transition: all 1s ease;
+    color: var(--color-shadow);
+}
+
+.complexity__type:visited {
+    color: inherit;
 }
 
 .complexity__type:hover {
     transform: scale(1.5);
+    cursor: pointer;
 }
 
 .complexity__type--selected {
+    color: var(--color-shadow);
+}
+
+.complexity__type--selected:visited {
     color: var(--color-shadow);
 }
 
@@ -313,5 +331,5 @@
 
 .footer {
     position: absolute;
-    bottom: -40px;
+    bottom: 0px;
 }

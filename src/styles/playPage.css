@@ -15,12 +15,25 @@
     --color-border: #f5bd2d;
     --color-text: #b79f8c;
     --color-top-list: #8cb1c6b0;
+    --color-button: var(--color-primary);
+
     --inut-background: #c4c4c4;
     --play-image: url('../static/images/zvezdnoe_nebo.jpeg');
     --play-size: 3;
     --sound: url('../static/images/volume.png');
 }
 
+.complexity--easy {
+    --play-size: 3;
+}
+
+.complexity--middle {
+    --play-size: 4;
+}
+
+.complexity--hard {
+    --play-size: 5;
+}
 
 
 .body {
@@ -39,6 +52,10 @@
     }
 }
 
+.app {
+    display: block;
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -51,6 +68,7 @@
 
     border: none;
     background: none;
+
 }
 
 @media (min-width: 800px) {
@@ -118,7 +136,7 @@
 
 @media (min-width: 800px) {
     .main__player {
-        width: 40%;
+        height: unset;
         min-width: 600px;
         max-width: 700px;
         margin: 0 auto;
@@ -161,6 +179,8 @@
 
     grid-template-columns: repeat(var(--play-size), 1fr);
     grid-template-rows: repeat(var(--play-size), 1fr);
+    transition: 2s ease-in-out;
+
 }
 
 @media (min-width: 800px) {
@@ -169,8 +189,19 @@
     }
 }
 
+button {
+    padding: 0;
+}
+
 .playwindow__puzzle {
-    border: dotted 5px var(--color-secondary);
+    border: solid 2px var(--color-secondary-dark);
+    background-color: var(--background-color);
+    transition: all 2s ease-in;
+}
+
+.playwindow__puzzle img {
+    width: 100%;
+    height: 100%;
 }
 
 .main__top {
@@ -236,7 +267,7 @@
     content: '';
 
     background: none;
-}   
+}
 
 
 .complexity__item {

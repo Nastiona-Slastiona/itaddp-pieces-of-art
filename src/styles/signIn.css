@@ -1,16 +1,23 @@
 @import url('./main.css');
 
+.dark_mode {
+    --color-button: var(--color-primary);
+
+    --background-image: url("../static/images/signIn_background--blur.png");
+
+}
+
 .body {
     margin: 0;
 
-    background-image: url('../static/images/signIn_background--blur.png');
+    background-image: var(--background-image);
 }
 
 @media (min-width: 800px) {
     .body {
         margin: auto;
 
-        background-image: url('../static/images/signIn_background--blur.png');
+        background-image: (--background-image);
     }
 }
 
@@ -93,7 +100,7 @@
     justify-self: center;
 }
 
-.form__item  label {
+.form__item label {
     margin: 15px 0 0 25px;
 }
 
@@ -101,7 +108,7 @@
     margin-left: 0;
 }
 
-.form__item  label small {
+.form__item label small {
     font-size: 18px;
 }
 
@@ -153,7 +160,7 @@
 .main__info::after {
     position: absolute;
     z-index: -1;
-    right: 80px;
+    right: 220px;
     bottom: 50px;
 
     display: block;
